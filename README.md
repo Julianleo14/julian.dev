@@ -1,4 +1,0 @@
-# julian.dev
-Personal Portfolio
-
-
