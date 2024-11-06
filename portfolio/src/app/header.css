@@ -1,0 +1,79 @@
+.header_container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.header_title {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header_title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    color: #051323;
+    background-image: linear-gradient(45deg, #051323 10%, #000000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_title h2 {
+    font-size: 20px;
+    color: #051323;
+    background-image: linear-gradient(45deg, #051323 9%, #000000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.header_menu {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/* Tooltip estilo */
+.header_info {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+/* Tooltip inicial (oculto) */
+.tooltip {
+    visibility: hidden;
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Muestra el tooltip en focus */
+.header_info:focus-within .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.header_info a{
+    text-decoration: underline;
+    display: flex;
+}

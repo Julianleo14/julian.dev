@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --background: #ffffff;
+    --foreground: #051323;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+        --background: #051323;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    background-image: url("../../public/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100dvh;
+    padding: 1% 2%;
+}
+
+header {
+    height: 8vh;
+    background: rgb(5,19,35);
+    background: linear-gradient(90deg, rgba(5,19,35,0.3) 24%, rgba(11,42,58,1) 100%);
+    border-radius: 10px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    min-height: 5vh;
+    height: 100px;
+
+    background-color: blue;
+
+
+}
