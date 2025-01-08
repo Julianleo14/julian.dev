@@ -14,7 +14,7 @@ export default function MyHeader() {
                 <li><a>PROJECTS</a></li>
             </ul>
             <div className="header_info" tabIndex={0}>
-                <FaInfoCircle size={25} color="white"/>
+                <FaInfoCircle size={25} color="#212A31"/>
                 {/* Tooltip */}
                 <div className="tooltip">
                     <p>Techs and libraries in this component:</p>

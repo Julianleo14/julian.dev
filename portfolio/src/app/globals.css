@@ -9,23 +9,20 @@
 
 :root {
     --background: #ffffff;
-    --foreground: #051323;
+    --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
 
-        --background: #051323;
+        --background: #D3D9D4;
         --foreground: #ededed;
     }
 }
 
 body {
     background: var(--background);
-    background-image: url("../../public/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -36,9 +33,8 @@ body {
 
 header {
     height: 8vh;
-    background: rgb(5, 19, 35);
-    background: linear-gradient(90deg, rgba(5, 19, 35, 0.3) 24%, rgba(11, 42, 58, 1) 100%);
     border-radius: 10px;
+    background-color: #748D92;
 }
 
 main {
@@ -50,5 +46,7 @@ main {
 footer {
     min-height: 5vh;
     height: 100px;
-    background-color: blue;
+    background-color: #748D92;
 }
+
+
