@@ -19,7 +19,7 @@ export default function MyHeader() {
                 <div className="tooltip">
                     <p>Techs and libraries in this component:</p>
                     <ul>
-                        <li>React, TypeScript, plain CSS, HTML, <a href="https://react-icons.github.io/react-icons/"
+                        <li>React, TypeScript, CSS (Flexbox), HTML, <a href="https://react-icons.github.io/react-icons/"
                                                                    target="_blank" rel="noopener noreferrer">
                             React-Icons <FaLink size={10} color="white"/>
                         </a>

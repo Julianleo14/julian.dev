@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {nunito} from "@/app/fonts/font";
 import "./globals.css";
 import MyHeader from "@/app/header";
+import Home from "@/app/page";
 
 export const metadata: Metadata = {
     title: "Julian's Portfolio",
