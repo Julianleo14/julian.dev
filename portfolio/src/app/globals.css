@@ -8,36 +8,35 @@
 }
 
 :root {
-    --background: #ffffff;
+    background-color: #102634;
     --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
 
-        --background: #D3D9D4;
+        background-color: #0C1015;
         --foreground: #ededed;
     }
 }
 
 body {
     background: var(--background);
-
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     gap: 20px;
     height: 100dvh;
-    padding: 1% 2%;
+    padding: 1% 1%;
 }
 
-header {
-    height: 8vh;
-    /*background: rgb(5, 19, 35);*/
-    /*background: linear-gradient(90deg, rgba(5, 19, 35, 0.3) 24%, rgba(11, 42, 58, 1) 100%);*/
-    border-radius: 10px;
-    background-color: #748D92;
-}
+/*header {*/
+/*    height: 8vh;*/
+/*    !*background: rgb(5, 19, 35);*!*/
+/*    !*background: linear-gradient(90deg, rgba(5, 19, 35, 0.3) 24%, rgba(11, 42, 58, 1) 100%);*!*/
+/*    border-radius: 10px;*/
+/*    background-color: #748D92;*/
+/*}*/
 
 main {
     flex-grow: 1;

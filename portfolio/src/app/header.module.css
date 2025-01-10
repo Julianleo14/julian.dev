@@ -27,11 +27,25 @@
 
 .header_menu {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 300;
     display: flex;
     justify-content: space-between;
     width: 50%;
 }
+
+.header_menu li {
+    width: 150px;
+    transform: scale(1); /* Define el estado inicial */
+    transition: transform 0.8s ease-in-out;
+}
+
+.header_menu li:hover {
+    text-decoration: underline #87E4E0;
+    text-decoration-thickness: 3px;
+    transform: scale(1.2); /* Escala al 120% en hover */
+    cursor: pointer;
+}
+
 
 /* Tooltip estilo */
 .header_info {
@@ -62,7 +76,8 @@
     visibility: visible;
     opacity: 1;
 }
-.header_info a{
+
+.header_info a {
     text-decoration: underline;
     display: flex;
 }

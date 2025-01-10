@@ -3,6 +3,7 @@ import {nunito} from "@/app/fonts/font";
 import "./globals.css";
 import MyHeader from "@/app/header";
 import Home from "@/app/page";
+import MainHeader from "@/app/mainHeader";
 
 export const metadata: Metadata = {
     title: "Julian's Portfolio",
@@ -19,7 +20,9 @@ export default function RootLayout({
         <body
             className={`${nunito.className} antialiased`}>
         <header>
-            <MyHeader/>
+
+            {/*<MyHeader/>*/}
+            <MainHeader/>
         </header>
         <main>
             {children}

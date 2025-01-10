@@ -1,4 +1,4 @@
-import './header.css';
+import './header.module.css';
 import {FaInfoCircle, FaLink} from 'react-icons/fa';
 
 export default function MyHeader() {

@@ -1,95 +1,192 @@
-.homeContainer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.tabsContainer {
-    width: 85%;
-    height: 50%;
-    border-radius: 48px;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 16px 16px 48px #2e364330;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #124E66;
-}
-
-.textContainer {
-    margin: 0 3%;
-    width: 80%;
-    height: 75%;
-}
-
-.tabs {
-    width: 25%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.radioInput {
-    display: none;
-    width: 0;
-}
-.label {
-    height: 60%;
-    width: 90%;
-    color: white;
-    font-size: clamp(8px, 1vw, 24px);
-    font-weight: 700;
-    display: block;
+/* Encabezado superior */
+.homeHeader {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 10;
-    background-color: #2E3944;
-    transition: width 0.5s ease-in-out, background-color 0.3s ease-in-out; /* Transiciones suaves */
-    border-radius: 0px 20px 20px 0px;
+    min-height: 25vh;
+    background-image: linear-gradient(
+            to top,
+            rgba(12, 16, 21, 1),    /* Negro/azul oscuro en la parte inferior */
+            rgba(17, 34, 47, 0.3) 20%, /* Azul oscuro intermedio */
+            rgba(17, 34, 47, 0.3) 80%,  /* Azul oscuro intermedio */
+            rgba(12, 16, 21, 1)
+        /* Negro/azul oscuro en la parte superior */
+    ),
+    url("/background.jpg");
 
+    box-shadow: 0px 0px 15px 15px rgba(12, 16, 21, 1)
+; /* Suaviza los bordes del fondo */
 }
 
 
+/*!* Fondo general de la página *!*/
+/*.body {*/
+/*    background-color: #D9E8E3;*/
+/*    font-family: 'Arial', sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*}*/
 
-.labelChecked {
-    color: white;
-    font-size: clamp(8px, 1.5vw, 24px);
-    font-weight: 700;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 70%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #212A31;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Mantén las transiciones */
-    border-radius: 0px 15px 15px 0px;
+/*!* Contenedor principal *!*/
+/*.main-container {*/
+/*    display: flex;*/
+/*    background-color: #0F4C5C;*/
+/*    border-radius: 16px;*/
+/*    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+/*    overflow: hidden;*/
+/*    width: 80%;*/
+/*    max-width: 1200px;*/
+/*    min-height: 500px;*/
+/*}*/
 
-}
+/*!* Tabs laterales *!*/
+/*.tabs {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-around;*/
+/*    background-color: #2E3944;*/
+/*    padding: 16px;*/
+/*    width: 20%;*/
+/*    min-width: 200px;*/
+/*    height: 100%;*/
+/*    border-radius: 16px 0 0 16px;*/
+/*}*/
 
-.label:hover {
-    opacity: 0.8;
+/*!* Estilo de cada tab *!*/
+/*.tab {*/
+/*    background-color: #2E3944;*/
+/*    color: #FFFFFF;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    padding: 12px;*/
+/*    border-radius: 8px;*/
+/*    transition: all 0.3s ease;*/
+/*    cursor: pointer;*/
+/*}*/
 
-}
+/*!* Tab activa *!*/
+/*.tab.active {*/
+/*    background-color: #212A31;*/
+/*    transform: scale(1.05);*/
+/*}*/
 
-.profExpect{
-    height: 45%;
-    width: 85%;
-}
-.profExpect h1{
-    font-size: clamp(8px, 1.5vw, 24px);
-    font-weight: 700;
+/*!* Contenido principal *!*/
+/*.content {*/
+/*    flex: 1;*/
+/*    padding: 32px;*/
+/*    background-color: #0F4C5C;*/
+/*    color: #FFFFFF;*/
+/*    border-radius: 0 16px 16px 0;*/
+/*}*/
 
-}
-.profExpect p{
-    border-top: 2px solid #212A31;
-    overflow: auto;
-}
+/*!* Fondo inferior con gradiente *!*/
+/*.footer {*/
+/*    background: linear-gradient(90deg, #D9E8E3 0%, #0F4C5C 100%);*/
+/*    padding: 16px;*/
+/*    text-align: center;*/
+/*    font-size: 14px;*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+
+/*.homeContainer {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.tabsContainer {*/
+/*    width: 85%;*/
+/*    height: 50%;*/
+/*    border-radius: 48px;*/
+/*    box-sizing: border-box;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 16px 16px 48px #2e364330;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    background-color: #124E66;*/
+/*}*/
+
+/*.textContainer {*/
+/*    margin: 0 3%;*/
+/*    width: 80%;*/
+/*    height: 75%;*/
+/*}*/
+
+/*.tabs {*/
+/*    width: 25%;*/
+/*    height: 50%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-around;*/
+/*}*/
+/*.radioInput {*/
+/*    display: none;*/
+/*    width: 0;*/
+/*}*/
+/*.label {*/
+/*    height: 60%;*/
+/*    width: 90%;*/
+/*    color: white;*/
+/*    font-size: clamp(8px, 1vw, 24px);*/
+/*    font-weight: 700;*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    z-index: 10;*/
+/*    background-color: #2E3944;*/
+/*    transition: width 0.5s ease-in-out, background-color 0.3s ease-in-out; !* Transiciones suaves *!*/
+/*    border-radius: 0px 20px 20px 0px;*/
+
+/*}*/
+
+
+/*.labelChecked {*/
+/*    color: white;*/
+/*    font-size: clamp(8px, 1.5vw, 24px);*/
+/*    font-weight: 700;*/
+/*    cursor: pointer;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 70%;*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    background-color: #212A31;*/
+/*    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; !* Mantén las transiciones *!*/
+/*    border-radius: 0px 15px 15px 0px;*/
+
+/*}*/
+
+/*.label:hover {*/
+/*    opacity: 0.8;*/
+
+/*}*/
+
+/*.profExpect{*/
+/*    height: 45%;*/
+/*    width: 85%;*/
+/*}*/
+/*.profExpect h1{*/
+/*    font-size: clamp(8px, 1.5vw, 24px);*/
+/*    font-weight: 700;*/
+
+/*}*/
+/*.profExpect p{*/
+/*    border-top: 2px solid #212A31;*/
+/*    overflow: auto;*/
+/*}*/
