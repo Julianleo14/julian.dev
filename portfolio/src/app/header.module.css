@@ -1,28 +1,45 @@
-.header_container {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.header_container_home {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 16px;
+    text-align: center;
     height: 100%;
-}
-
-.header_title {
-    max-height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+            to top,
+            rgba(12, 16, 21, 1),
+            rgba(17, 34, 47, 0.3) 20%,
+            rgba(17, 34, 47, 0.3) 80%,
+            rgba(12, 16, 21, 1)
+    ),
+    url('/background.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 25px 25px rgba(12, 16, 21, 1);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-.header_title h1 {
-    font-size: 30px;
+.header_container_general {
+    color: #FFFFFF;
+    font-size: 24px;
     font-weight: bold;
-    line-height: 1;
-}
-
-.header_title h2 {
-    font-size: 20px;
-    font-weight: bold;
+    padding: 16px;
+    text-align: center;
+    height: 100%;
+    background-image: linear-gradient(
+            to top,
+            rgba(12, 16, 21, 1),
+            rgba(17, 34, 47, 0.3) 20%,
+            rgba(17, 34, 47, 0.3) 80%,
+            rgba(12, 16, 21, 1)
+    ),
+    url('/background.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 5px rgba(12, 16, 21, 1);
 }
 
 .header_menu {
@@ -30,13 +47,15 @@
     font-weight: 300;
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .header_menu li {
     width: 150px;
     transform: scale(1); /* Define el estado inicial */
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .header_menu li:hover {
@@ -47,37 +66,77 @@
 }
 
 
-/* Tooltip estilo */
-.header_info {
-    position: absolute;
-    bottom: 3px;
-    right: 3px;
-    cursor: pointer;
-}
-
-/* Tooltip inicial (oculto) */
-.tooltip {
-    visibility: hidden;
-    width: 300px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    right: 0px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin-top: 10px;
-}
-
-/* Muestra el tooltip en focus */
-.header_info:focus-within .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-.header_info a {
-    text-decoration: underline;
+.header_banner {
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    max-height: 8vh;
+}
+
+.header_title {
+    position: absolute;
+    width: 100%;
+    color: #87E4E0;
+    text-align: center;
+    background-color: rgba(12, 16, 21, 0.8);
+    box-shadow: 0px 0px 5px 1px #102634;
+    padding: 5px 10px;
+    border-radius: 1px;
+
+}
+
+.header_profilePic {
+    width: 35%;
+    max-width: 210px;
+
+}
+
+.header_title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.header_title h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.hamburgerContainer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15%;
+    background-color: white;
+    height: 95%;
+}
+.hamburgerMenu {
+    position: absolute;
+    top: 1.5%;
+    right: 2%;
+    font-size: 50px;
+
+
+}
+
+.hamburgerIcon {
+    display: block;
+    width: 50px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburgerClose {
+    display: none;
+    color: white;
+}
+.hamburgerMenuActive{
+
+}
+
+.hamburgerMenu:hover .hamburgerIcon {
+    transform: scale(1.2);
 }

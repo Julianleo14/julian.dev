@@ -8,18 +8,20 @@
 }
 
 :root {
-    background-color: #102634;
+    background: #102634;
     --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
 
-        background-color: #0C1015;
+        background: #0C1015;
         --foreground: #ededed;
     }
 }
-
+html{
+    font-size: 16px;
+}
 body {
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
@@ -30,13 +32,9 @@ body {
     padding: 1% 1%;
 }
 
-/*header {*/
-/*    height: 8vh;*/
-/*    !*background: rgb(5, 19, 35);*!*/
-/*    !*background: linear-gradient(90deg, rgba(5, 19, 35, 0.3) 24%, rgba(11, 42, 58, 1) 100%);*!*/
-/*    border-radius: 10px;*/
-/*    background-color: #748D92;*/
-/*}*/
+header {
+    min-height: 20vh;
+}
 
 main {
     flex-grow: 1;

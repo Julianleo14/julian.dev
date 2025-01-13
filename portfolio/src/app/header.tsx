@@ -1,33 +1,47 @@
-import './header.module.css';
-import {FaInfoCircle, FaLink} from 'react-icons/fa';
+'use client';
+import headerStyles from "@/app/header.module.css";
+import {usePathname} from "next/navigation";
+import Image from "next/image";
+import HamburgerMenu from "@/app/components/hamburgerMenu";
 
 export default function MyHeader() {
-    return (
-        <div className="header_container">
-            <div className="header_title">
-                <h1>Julian Garcia</h1>
-                <h2>&lt; Frontend Developer /&gt;</h2>
-            </div>
-            <ul className="header_menu">
-                <li><a href="/"> HOME</a></li>
-                <li><a href="/experience"> EXPERIENCE</a></li>
-                <li><a>PROJECTS</a></li>
-            </ul>
-            <div className="header_info" tabIndex={0}>
-                <FaInfoCircle size={25} color="#212A31"/>
-                {/* Tooltip */}
-                <div className="tooltip">
-                    <p>Techs and libraries in this component:</p>
-                    <ul>
-                        <li>React, TypeScript, CSS (Flexbox), HTML, <a href="https://react-icons.github.io/react-icons/"
-                                                                   target="_blank" rel="noopener noreferrer">
-                            React-Icons <FaLink size={10} color="white"/>
-                        </a>
-                        </li>
+    const path = usePathname();
 
+    return (
+        <>
+            {path === "/" ? (
+                <div className={headerStyles.header_container_home}>
+                    <ul className={headerStyles.header_menu}>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/experience">EXPERIENCE</a></li>
+                        <li><a>PROJECTS</a></li>
                     </ul>
+                    <div className={headerStyles.header_banner}>
+                        <Image className={headerStyles.header_profilePic}
+                               src={'/profile.png'}
+                               alt={"Profile picture"}
+                               width={0}
+                               height={0}
+                               sizes="100vw" // Ajusta al ancho del viewport
+                        />
+                        <div className={headerStyles.header_title}>
+                            <h1>Julian Garcia</h1>
+                            <h2>&lt; Frontend Developer /&gt;</h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            ) : (
+                <div className={headerStyles.header_container_general}>
+                    <ul className={headerStyles.header_menu}>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/experience">EXPERIENCE</a></li>
+                        <li><a>PROJECTS</a></li>
+                    </ul>
+
+
+                </div>
+            )}
+            <HamburgerMenu/>
+        </>
     );
 }
