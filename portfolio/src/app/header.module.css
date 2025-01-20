@@ -68,7 +68,7 @@
 
 .header_banner {
     display: flex;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -79,13 +79,11 @@
 .header_title {
     position: absolute;
     width: 100%;
-    color: #87E4E0;
+    color: #ffffff;
     text-align: center;
-    background-color: rgba(12, 16, 21, 0.8);
-    box-shadow: 0px 0px 5px 1px #102634;
     padding: 5px 10px;
     border-radius: 1px;
-
+    text-shadow: #87E4E0 1px 0 10px;
 }
 
 .header_profilePic {
@@ -95,48 +93,100 @@
 }
 
 .header_title h1 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 1;
 }
 
 .header_title h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.hamburgerContainer{
+.hamburgerContainer {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 15%;
-    background-color: white;
+    width: 20%;
     height: 95%;
 }
+
 .hamburgerMenu {
     position: absolute;
-    top: 1.5%;
+    top: 1%;
     right: 2%;
-    font-size: 50px;
-
-
 }
 
-.hamburgerIcon {
-    display: block;
-    width: 50px;
-    color: white;
-    transition: transform 0.3s ease-in-out;
-}
-
-.hamburgerClose {
+.hamburgerMenuModal {
     display: none;
-    color: white;
-}
-.hamburgerMenuActive{
-
+    background-color: #00000070;
+    height: 100%;
 }
 
-.hamburgerMenu:hover .hamburgerIcon {
-    transform: scale(1.2);
+.hamburgerMenuModal ul {
+
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+
+.menuIcon {
+    --s: 30px; /* control the size */
+    --c: white; /* the color */
+    width: var(--s);
+    height: calc(var(--s) * 0.80);
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s) / 2) solid #0000;
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+    background: var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+    background-size: 20% 80%,
+    40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    cursor: pointer;
+    transition: background-position 0.6s,
+    clip-path 0.6s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.menuIcon:before, .menuIcon:after {
+    content: "";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.menuIcon:checked {
+    clip-path: inset(0);
+    --_p: calc(-1 * var(--s));
+    --_s: 0s;
+}
+
+.menuIcon:checked:before {
+    transform: rotate(45deg);
+}
+
+.menuIcon:checked:after {
+    transform: rotate(-45deg);
+}
+
+.menuIcon:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
 }

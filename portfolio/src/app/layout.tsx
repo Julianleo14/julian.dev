@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import {nunito} from "@/app/fonts/font";
 import "./globals.css";
-import MainHeader from "@/app/mainHeader";
 import MyHeader from "@/app/header";
 import React from "react";
 
