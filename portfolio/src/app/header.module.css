@@ -65,10 +65,8 @@
     cursor: pointer;
 }
 
-
 .header_banner {
     display: flex;
-    /*align-items: flex-end;*/
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -99,40 +97,60 @@
 }
 
 .header_title h2 {
+
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .hamburgerContainer {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 20%;
-    height: 95%;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100vh;
 }
 
 .hamburgerMenu {
     position: absolute;
-    top: 1%;
+    top: 2%;
     right: 2%;
 }
 
 .hamburgerMenuModal {
+    font-size: 1rem;
     display: none;
-    background-color: #00000070;
+    background-color: #000000;
     height: 100%;
+    color: white;
+    border-radius: 5px;
 }
 
 .hamburgerMenuModal ul {
-
-    height: 25%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding-left: 10%;
+    padding: 30% 0% 0% 10%;
 }
+.hamburgerMenuModal li{
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
 
+}
+.hamburgerMenuModal li:hover{
+    text-decoration-thickness: 3px;
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: #051323;
+    border-radius: 5px;
+
+}
+/*MenuIcon*/
 .menuIcon {
     --s: 30px; /* control the size */
     --c: white; /* the color */
@@ -158,6 +176,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    display: none;
 }
 
 .menuIcon:before, .menuIcon:after {
@@ -189,4 +208,23 @@
     border: none;
     outline: 2px solid var(--c);
     outline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+    .menuIcon{
+        display: block;
+    }
+    .header_menu{
+        display: none;
+    }
+    .header_title{
+        margin-top: 15%;
+    }
+    .header_title h1{
+        font-size: 2rem;
+    }
+    .header_title h2{
+
+        font-size: 1rem;
+    }
 }
