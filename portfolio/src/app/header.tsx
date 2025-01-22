@@ -17,13 +17,6 @@ export default function MyHeader() {
                         <li><a>PROJECTS</a></li>
                     </ul>
                     <div className={headerStyles.header_banner}>
-                        {/*<Image className={headerStyles.header_profilePic}*/}
-                        {/*       src={'/profile.png'}*/}
-                        {/*       alt={"Profile picture"}*/}
-                        {/*       width={0}*/}
-                        {/*       height={0}*/}
-                        {/*       sizes="100vw" // Ajusta al ancho del viewport*/}
-                        {/*/>*/}
                         <div className={headerStyles.header_title}>
                             <h1>Julian Garcia</h1>
                             <h2>&lt; Frontend Developer /&gt;</h2>

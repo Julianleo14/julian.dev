@@ -1,53 +1,37 @@
 'use client'
 import styles from "@/app/home.module.css"
 import React from "react";
+import Image from "next/image";
 
 
 export default function Home() {
 
-    const [activeTab, setActiveTab] = React.useState <number>(0);
-    const tabNames = ["ABOUT ME", "HOBBIES", "SKILLS"]
-    const handleTabChange = (tabIndex: number) => {
-        setActiveTab(tabIndex);
-    };
 
     return (
-        <div>
-            Probando 2
+        <div className={styles.homeContainer}>
+            <section className={styles.homeAbout}>
+                <article className={styles.homeAbout_title}>
+                    <Image className={styles.profilePic}
+                           src={'/profile.jpg'}
+                           alt={"Profile picture"}
+                           width={50}
+                           height={50}
+                           sizes="100vw"
+                    />
+                    <h2>-About Me-</h2>
+                </article>
+                <article className={styles.homeAbout_text}>
+                    Front-End Developer with experience in React, Next.js, and TypeScript. I enjoy solving
+                    challenges, creating user-friendly applications, and constantly learning new technologies. My focus
+                    is on clean code, modern design, and delivering high-quality results.
+
+                </article>
+            </section>
+            <section className={styles.homeCards}>
+                Aquí van las cards
+            </section>
         </div>
-        // <div className={styles.homeContainer}>
-        //     <div className={styles.tabsContainer}>
-        //         <section className={styles.tabs}>
-        //             {tabNames.map((tab, index) => {
-        //                 return (
-        //                     <label key={index}
-        //                            className={activeTab === index ? styles.labelChecked : styles.label}
-        //                     >
-        //                         {tab}
-        //                         <input
-        //                             type="radio"
-        //                             id={`tab${index}`}
-        //                             name="tab"
-        //                             className={styles.radioInput}
-        //                             checked={activeTab === index}
-        //                             onChange={() => handleTabChange(index)}
-        //                         />
-        //                     </label>
-        //                 );
-        //             })}
-        //
-        //         </section>
-        //         <section className={styles.textContainer}> Aqui va el texto</section>
-        //
-        //     </div>
-        //     <div className={styles.profExpect}>
-        //         <h1> Professional Expectations</h1>
-        //
-        //         <p>
-        //             Aqui va el texto
-        //         </p>
-        //     </div>
-        // </div>
+
     );
 };
 
