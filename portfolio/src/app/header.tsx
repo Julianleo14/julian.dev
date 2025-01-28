@@ -1,6 +1,6 @@
 'use client';
 import headerStyles from "@/app/header.module.css";
-import {usePathname} from "next/navigation";
+
 
 export default function MyHeader() {
 
