@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-    basePath: "/julian.dev/portfolio",
-    output: "export"
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export', // Exporta como archivos estáticos
+    basePath: '/portfolio', // Esto es necesario si tu repositorio no es un user/organization repo
+    assetPrefix: '/portfolio', // Ruta base para los recursos estáticos
 };
 
-export default nextConfig;
+module.exports = nextConfig;
