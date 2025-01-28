@@ -53,6 +53,7 @@ footer {
             rgba(12, 16, 21, 1)
     ),
     url('/background.jpg');
+    background-size: cover;
 
 }
 

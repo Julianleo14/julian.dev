@@ -2,11 +2,10 @@
 import styles from "@/app/home.module.css"
 import React from "react";
 import Image from "next/image";
-
+import CardInfo from "@/app/components/cardInfo";
+import {contactInfo, hobbies, techs, projects, skills} from "@utils/info"
 
 export default function Home() {
-
-
     return (
         <div className={styles.homeContainer}>
             <section className={styles.homeAbout}>
@@ -28,7 +27,11 @@ export default function Home() {
                 </article>
             </section>
             <section className={styles.homeCards}>
-                Aquí van las cards
+                <CardInfo title={"Contact"} content={contactInfo} cardType={"small"} backgroundColor={"dark"}/>
+                <CardInfo title={"Hobbies"} content={hobbies} cardType={"small"} backgroundColor={"light"}/>
+                <CardInfo title={"Projects Created"} content={projects} cardType={"large"} backgroundColor={"light"}/>
+                <CardInfo title={"Techs"} content={techs} cardType={"large"} backgroundColor={"dark"}/>
+                <CardInfo title={"Skills and Qualities"} content={skills} cardType={"large"} backgroundColor={"dark"}/>
             </section>
         </div>
 
