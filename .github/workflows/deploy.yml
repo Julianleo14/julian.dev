@@ -16,12 +16,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18' # Asegúrate de usar una versión compatible
+        node-version: '18'
         cache: 'npm'
+        cache-dependency-path: portfolio/package-lock.json  # Especificar la ruta del cache
+
+    - name: Verify package-lock.json location
+      run: ls -la portfolio  # Esto nos ayudará a depurar si el archivo existe
 
     - name: Install dependencies
       working-directory: ./portfolio
-      run: npm install
+      run: npm ci || npm install  # 'npm ci' usa package-lock.json si está disponible
 
     - name: Build the project
       working-directory: ./portfolio
