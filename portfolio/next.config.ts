@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    basePath: '/portfolio', // Esto es necesario si tu repositorio no es un user/organization repo
-    assetPrefix: '/portfolio', // Ruta base para los recursos estáticos
+    output: "export", // Habilita la exportación estática
+    basePath: "/juliandev", // Asegura que los assets tengan el path correcto en GitHub Pages
+    assetPrefix: "/juliandev",
 };
 
 module.exports = nextConfig;
