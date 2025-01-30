@@ -1,35 +1,32 @@
 /*Projects Card*/
 .cardContainerWithDetails {
     display: flex;
-    min-width: 350px;
-    max-width: 600px; /* Mínimo ancho */
-    max-height: 500px; /* Límite máximo de altura */
+    width: auto;
+    max-width: 500px; /* Máximo ancho cuando crezca horizontalmente */
+    min-width: 300px; /* Mínimo ancho */
+    /*max-height: 500px; !* Límite máximo de altura *!*/
     overflow: hidden; /* Habilita el scroll si el contenido excede */
     box-shadow: 0px 0px 10px 2px #11222F;
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
 }
-
-.cardContentWithDetails {
+.cardContentWithDetails{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-.listWithDetails {
+.listWithDetails{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
-.listItemWithDetails {
+.listItemWithDetails{
     display: flex;
     flex-direction: column;
 
 }
-
-.listItemWithDetailsTitle {
+.listItemWithDetailsTitle{
     display: flex;
     gap: 10px;
     font-size: 20px;
@@ -38,8 +35,7 @@
     border-bottom: 2px double #87E4E0;
 
 }
-
-.details {
+.details{
     padding-left: 25px;
     font-size: 18px;
     color: white;
@@ -49,7 +45,9 @@
 
 /*Small Card*/
 .cardContainerSmall {
-    width: 350px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 2px #11222F;
     color: white;
@@ -125,8 +123,9 @@
 /*Large Card*/
 .cardContainerLarge {
     display: flex;
-    min-width: 350px;
-    max-width: 600px; /* Máximo ancho cuando crezca horizontalmente */
+    width: auto;
+    max-width: 500px; /* Máximo ancho cuando crezca horizontalmente */
+    min-width: 300px; /* Mínimo ancho */
     max-height: 500px; /* Límite máximo de altura */
     overflow: hidden; /* Habilita el scroll si el contenido excede */
     box-shadow: 0px 0px 10px 2px #11222F;
@@ -167,33 +166,12 @@
 
 @media (max-width: 600px) {
     .cardContainerLarge {
-        width: 100%;
+        max-width: 300px;
         max-height: max-content;
-        max-width: 100%;
     }
 
-    .cardContainerSmall {
-        max-height: max-content;
+    .cardContentLarge {
         width: 100%;
-        max-width: 100%;
-
-    }
-
-    .cardContainerWithDetails {
-        max-height: max-content;
-
-        width: 100%;
-        min-width: auto;
-        max-width: 100%;
-
-    }
-
-    .cardContainerLarge {
-        max-height: max-content;
-
-        width: 100%;
-        max-width: 100%;
-        min-width: auto;
     }
 
     .listLarge {

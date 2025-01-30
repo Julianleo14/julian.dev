@@ -20,7 +20,7 @@ export default function Home() {
                     <h2>-About Me-</h2>
                 </article>
                 <article className={styles.homeAbout_text}>
-                    Full Stack Developer with experience in React, Next.js, and TypeScript. I enjoy solving
+                    Front-End Developer with experience in React, Next.js, and TypeScript. I enjoy solving
                     challenges, creating user-friendly applications, and constantly learning new technologies. My focus
                     is on clean code, modern design, and delivering high-quality results.
 
@@ -29,8 +29,8 @@ export default function Home() {
             <section className={styles.homeCards}>
                 <CardInfo title={"Contact"} content={contactInfo} cardType={"small"} backgroundColor={"dark"}/>
                 <CardInfo title={"Hobbies"} content={hobbies} cardType={"small"} backgroundColor={"light"}/>
-                <CardInfo title={"Projects Created"} content={projects} cardType={"large"} backgroundColor={"dark"}/>
-                <CardInfo title={"Techs"} content={techs} cardType={"large"} backgroundColor={"light"}/>
+                <CardInfo title={"Projects Created"} content={projects} cardType={"large"} backgroundColor={"light"}/>
+                <CardInfo title={"Techs"} content={techs} cardType={"large"} backgroundColor={"dark"}/>
                 <CardInfo title={"Skills and Qualities"} content={skills} cardType={"large"} backgroundColor={"dark"}/>
             </section>
         </div>

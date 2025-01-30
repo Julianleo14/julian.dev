@@ -7,6 +7,7 @@ export default function MyHeader() {
 
     return (
         <div className={headerStyles.header_container_home}>
+
             <div className={headerStyles.header_banner}>
                 <div className={headerStyles.header_title}>
                     <h1>Julian Garcia</h1>

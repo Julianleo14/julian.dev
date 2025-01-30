@@ -186,10 +186,10 @@ export const skills = {
             icon: <RiTeamFill size={25}/>,
             info: "Teamwork"
         },
-    Curiosity:
+    communication:
         {
-            icon: <GiMagnifyingGlass size={25}/>,
-            info: "Curiosity"
+            icon: <TbMessageCircleCheck size={25}/>,
+            info: "Communication"
         },
     proactive:
         {
@@ -221,10 +221,10 @@ export const skills = {
             icon: <IoIosSchool size={25}/>,
             info: "Continuous learning"
         },
-    communication:
+    curiosity:
         {
-            icon: <TbMessageCircleCheck size={25}/>,
-            info: "Communication"
+            icon: <GiMagnifyingGlass size={25}/>,
+            info: "Curiosity"
         },
 
 }
